@@ -1,0 +1,93 @@
+
+
+
+  /* Parallax banner */
+  .banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full screen height */
+    color: #333;
+    background: url('../../assets/img/banner_one.jpg') center/cover no-repeat; /* Orqa fon rasmi */
+    background-attachment: fixed; /* Parallax effekt */
+    text-align: center;
+  }
+
+  /* Banner kontenti */
+  .banner-content {
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.85); /* Yengil oq qatlam */
+    text-align: center;
+    color: #333;
+  }
+
+  /* Animatsiyalar */
+  .banner-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #A0522D; /* Jigarrang tus */
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards; /* Fade-in animatsiya */
+  }
+
+  .banner-content p {
+    font-size: 1.3rem;
+    margin: 15px 0;
+    color: #555;
+    opacity: 0;
+    animation: slideIn 2s ease-out forwards; /* Slide-in animatsiya */
+    animation-delay: 0.5s;
+  }
+
+  /* CTA tugma */
+  .cta-button {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #A0522D;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    animation: bounceIn 1.8s ease-out forwards; /* Bounce animatsiya */
+    animation-delay: 1s;
+  }
+
+  .cta-button:hover {
+    transform: scale(1.05);
+  }
+
+  /* Asosiy kontent */
+  .content {
+    padding: 50px;
+    text-align: center;
+    background-color: #f4f4f4;
+  }
+
+  /* Animatsiya ta'riflari */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+  }

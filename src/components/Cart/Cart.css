@@ -1,0 +1,16 @@
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .cart-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+  }
+  
+  .item-details h2 {
+    font-size: 1.2rem;
+  }
+  

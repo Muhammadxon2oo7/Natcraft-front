@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+ul,li{
+  list-style: none;
+}
+body{
+    background-color: #F0EBE3;
+    background-image: url('./assets/img/body_bg.png');
+    
+}
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px
+}

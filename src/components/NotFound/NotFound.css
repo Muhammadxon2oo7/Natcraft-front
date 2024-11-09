@@ -1,0 +1,104 @@
+/* NotFound.css */
+.notfound-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4ede2; /* Cream color */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .notfound-animation {
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .notfound-animation h1 {
+    font-size: 8rem;
+    color: #cfa67b; /* Warm brown */
+    font-family: 'Courier New', Courier, monospace;
+    animation: text-fade 2s ease-in-out infinite alternate;
+  }
+  
+  .notfound-animation p {
+    font-size: 1.5rem;
+    color: #8c6849;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+  }
+  
+  .notfound-home-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #b99467; /* Soft bronze */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .notfound-home-link:hover {
+    background-color: #a6844f; /* Darker bronze */
+    transform: scale(1.1) rotate(-2deg);
+  }
+  
+  /* Decorative animations */
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes text-fade {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.6;
+    }
+  }
+  
+  /* Background decoration */
+  .notfound-container::before,
+  .notfound-container::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    animation: spin 10s linear infinite;
+  }
+  
+  .notfound-container::before {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #b99467, transparent);
+    top: -100px;
+    right: -100px;
+  }
+  
+  .notfound-container::after {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, #8c6849, transparent);
+    bottom: -80px;
+    left: -80px;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

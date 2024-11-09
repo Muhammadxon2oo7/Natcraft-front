@@ -1,0 +1,336 @@
+/* Umumiy container uslublari */
+.container {
+  padding: 1.5rem;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Kategoriya sarlavhasi */
+.categoriesTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  color: #7d6a47; /* Dekorativ jigarrang rang */
+}
+
+/* Kategoriya tugmalari */
+.categoriesList {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.categoryButton {
+  padding: 0.5rem 1rem;
+  border: 2px solid #7d6a47;
+  border-radius: 5px;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s;
+  font-weight: bold;
+}
+
+.categoryButton.active {
+  background-color: #7d6a47;
+  color: #fff;
+}
+
+.categoryButton:hover {
+  background-color: #444;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Mahsulotlar sarlavhasi */
+.productsTitle {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  color: #7d6a47;
+}
+
+/* Mahsulotlar tarmog'i */
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  align-items: start;
+}
+
+/* Mahsulot kartasi */
+.productCard {
+  width: 200px; /* Kartaning kengligini bir xil qilish */
+  height: 330px; /* Kartaning balandligini bir xil qilish */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.productCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Mahsulot rasmi */
+.productImageContainer {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  padding-top: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+
+
+.productImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.productCard:hover .productImage {
+  transform: translate(-50%, -50%) scale(1.1); /* Kattalashish effekti */
+}
+
+/* Mahsulot sarlavhasi */
+.productTitle {
+  font-size: 1rem;
+  color: #7d6a47;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Mahsulot narxi */
+.productPrice {
+  font-size: 1rem;
+  color: #a45d3c;
+  font-weight: bold;
+}
+/* Show tugmasi */
+.showButton {
+  margin-top: 0.5rem;
+  padding: 0.3rem 1rem;
+  background-color: #7d6a47;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: bold;
+}
+
+.showButton:hover {
+  background-color: #a45d3c;
+  transform: scale(1.05);
+}
+
+
+/* Modal umumiy oynasi */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+/* Modal mazmuni */
+
+.modalContent {
+  background-color: #fff;
+  padding: 2rem;
+  width: 60%;
+  max-width: 800px;
+  display: flex;
+  gap: 1.5rem;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Yopish tugmasi */
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #a45d3c;
+  font-weight: bold;
+}
+
+.zoomContainer {
+  width: 300px; /* Kichik ko'rinishdagi rasm o'lchami */
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  cursor: crosshair;
+}
+
+.zoomImage {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease;
+  transform-origin: center center;
+}
+
+.zoomContainer:hover .zoomImage {
+  transform: scale(2); /* Rasmni kattalashtirish */
+}
+
+/* Modal rasm qismi */
+/* Modal rasm qismi */
+.zoomContainer {
+  width: 300px; /* Kichik ko'rinishdagi rasm o'lchami */
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  cursor: crosshair;
+}
+
+.zoomImage {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease;
+  transform-origin: center center;
+  transform: scale(1); /* Hover qilinganda transform scale(2) bo'ladi */
+}
+
+.zoomContainer:hover .zoomImage {
+  transform: scale(2); /* Rasmni kattalashtirish */
+}
+.modalImageContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  cursor: zoom-in; /* Kursorni zoom-in ko‘rinishda qilish */
+}
+
+.modalImage {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 8px;
+  object-fit: contain;
+  transition: transform 0.3s ease; /* Kattalashish animatsiyasi */
+}
+
+
+/* Modal ma'lumot qismi */
+.modalInfo {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #333;
+}
+
+/* Mahsulot sarlavhasi */
+.modalInfo h4 {
+  font-size: 1.5rem;
+  color: #7d6a47;
+  margin-bottom: 0.5rem;
+}
+
+/* Mahsulot tavsifi */
+.modalInfo p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Narx qismi */
+.modalInfo .price {
+  font-size: 1.25rem;
+  color: #a45d3c;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+
+
+/* Product Info Section */
+.productInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.productCategory {
+  font-size: 1rem;
+  color: #7f6544;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.productTitle {
+  font-size: 2rem;
+  color: #4a3b2f;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.productPrice {
+  font-size: 1.6rem;
+  color: #a45d3c;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  border-bottom: 2px dotted #d1b27c;
+  padding-bottom: 5px;
+}
+
+.productDescription {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.productStock, .productLocation, .productSeller {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.addToCartButton {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #d1b27c;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.addToCartButton:hover {
+  background-color: #b9965a;
+  transform: translateY(-3px);
+}
